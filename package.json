@@ -4,13 +4,19 @@
   "description": "",
   "main": "dist/server",
   "scripts": {
-    "prebuild": "npm run clean && tslint -c tslint.json -p ./tsconfig.json --fix",
-    "build": "nodemon tsc --build ./tsconfig.json",
+		"lint": "tslint -c tslint.json -p ./tsconfig.json --fix",
+		"clean": "rimraf dist, client/.next",
+
+    "prebuild": "npm run clean & npm run lint",
+		"build": "next build ./client && tsc --build ./tsconfig.json",
+		
     "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production node .",
-    "clean": "rimraf dist",
-    "predev": "npm run clean",
-    "dev": "cross-env NODE_ENV=development ts-node server",
+    
+    "predev": "npm run lint",
+		"dev": "cross-env NODE_ENV=development ts-node server",
+		"postdev": "npm run clean",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -31,6 +37,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@types/express": "^4.17.0",
+    "@types/i18next": "^12.1.0",
     "@types/node": "^12.6.3",
     "@types/pino": "^5.8.8",
     "@types/react": "^16.8.23",

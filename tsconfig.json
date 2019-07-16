@@ -7,7 +7,7 @@
 				"esnext"
 			],
 			"esModuleInterop": true,
-			"target": "es5",
+			"target": "esnext",
 			"noImplicitAny": false,
 			"moduleResolution": "node",
 			"sourceMap": true,
@@ -20,9 +20,12 @@
 					]
 			}
 	},
+	"typeRoots": [
+		"node_modules/@types"
+	],
 	"include": [
 			"server/**/*.ts",
 			"client/**/*.ts",
-			"client/**/*.tsx"
+			"client/**/*.tsx",
 	]
 }

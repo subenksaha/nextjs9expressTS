@@ -1,11 +1,15 @@
-import Link from "next/link";
 import React from "react";
+import { i18n, Link, withTranslation } from "../libs/i18n";
 
-const DemoPage: React.FunctionComponent<any> = () => (
+const DemoPage = () => (
 		<div>
 				<h1>Welcome To Second Page</h1>
 				<Link href="/"><button type="button">Go Back</button></Link>
 		</div>
 );
-
-export default DemoPage;
+DemoPage.getInitialProps = async ({ req }) => {
+	return {
+		namespacesRequired: ["common"]
+	};
+};
+export default withTranslation(["common"])(DemoPage);

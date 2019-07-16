@@ -6,8 +6,8 @@ const Next = next({
 	conf: NextConfig,
 	dev,
 	dir: "client",
-	quiet: false
+	quiet: false,
 });
 const handler = Next.getRequestHandler();
 
-export {Next, handler} ;
+export { Next, handler };
