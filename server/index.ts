@@ -7,7 +7,6 @@ import { handler, Next } from "./next";
 import {router} from "./routes/index";
 
 async function bootstrap() {
-	console.log(path.join(__dirname, "..", "static"));
 	const logger = pino({
 		prettyPrint: true
 	});
