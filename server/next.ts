@@ -1,5 +1,5 @@
 import next from "next";
-import NextConfig from "./next.config";
+import NextConfig from "../client/next.config";
 const dev = process.env.NODE_ENV !== "production";
 
 const Next = next({
