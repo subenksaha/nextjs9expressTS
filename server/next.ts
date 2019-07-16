@@ -4,7 +4,7 @@ const dev = process.env.NODE_ENV !== "production";
 
 const Next = next({
 	conf: NextConfig,
-	dev: true,
+	dev,
 	dir: "client",
 	quiet: false
 });

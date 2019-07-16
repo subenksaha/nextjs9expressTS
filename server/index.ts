@@ -11,9 +11,9 @@ async function bootstrap() {
 	await Next.prepare();
 	const server = express();
 	server.use("/", router);
-		// server.get("*", (req, res) => {
-		//   return handler(req, res);
-		// });
+	server.get("*", (req, res) => {
+		return handler(req, res);
+	});
 
 	server.listen(80, (err) => {
 			if (err) { throw err; }
