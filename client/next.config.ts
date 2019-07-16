@@ -5,13 +5,7 @@ const config = withLess({
 	lessLoaderOptions: {
 		javascriptEnabled: true,
 		modifyVars: {
-			"@body-background": "#3AAFA9",
-			"@component-background": "#3AAFA9",
-			"@disabled-color": "#000000",
-			"@heading-color": "#FEFFFF",
-			"@primary-color": "#3AAFA9",
-			"@text-color": "#DEF2F1",
-			"@text-color-secondary": "#FEFFFF",
+			"@primary-color": "#000000",
 		},
 		sourceMap: true,
 	},
