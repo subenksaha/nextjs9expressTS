@@ -4,19 +4,15 @@
   "description": "",
   "main": "dist/server",
   "scripts": {
-		"lint": "tslint -c tslint.json -p ./tsconfig.json --fix",
-		"clean": "rimraf dist, client/.next",
-
+    "lint": "tslint -c tslint.json -p ./tsconfig.json --fix",
+    "clean": "rimraf dist, client/.next",
     "prebuild": "npm run clean & npm run lint",
-		"build": "next build ./client && tsc --build ./tsconfig.json",
-		
+    "build": "next build ./client && tsc --build ./tsconfig.json",
     "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production node .",
-    
     "predev": "npm run lint",
-		"dev": "cross-env NODE_ENV=development ts-node server",
-		"postdev": "npm run clean",
-
+    "dev": "cross-env NODE_ENV=development ts-node server",
+    "postdev": "npm run clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,6 +1,6 @@
 import App, { Container } from "next/app";
 import React from "react";
-import { appWithTranslation } from "../libs/i18n";
+import { appWithTranslation } from "../../libs/i18n";
 
 class MyApp extends App {
 	public render() {

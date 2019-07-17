@@ -1,6 +1,6 @@
 import { Button } from "antd";
 import React from "react";
-import { i18n, Link, withTranslation } from "../libs/i18n";
+import { i18n, Link, withTranslation } from "../../libs/i18n";
 
 const HomePage = ({t}) => (
 	<div>

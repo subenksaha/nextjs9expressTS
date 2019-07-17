@@ -25,7 +25,7 @@
 	],
 	"include": [
 			"server/**/*.ts",
-			"client/**/*.ts",
-			"client/**/*.tsx",
+			"client/**/*.{ts,tsx}",
+			"libs/**/*.ts"
 	]
 }

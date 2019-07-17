@@ -1,5 +1,5 @@
 import React from "react";
-import { i18n, withTranslation } from "../libs/i18n";
+import { i18n, withTranslation } from "../../libs/i18n";
 
 class ErrorPage extends React.Component<any, any> {
 	public static async getInitialProps({ res, err }) {

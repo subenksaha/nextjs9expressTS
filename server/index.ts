@@ -2,7 +2,7 @@ import express from "express";
 import nextI18NextMiddleware from "next-i18next/middleware";
 import path from "path";
 import pino from "pino";
-import nextI18next from "../client/libs/i18n";
+import nextI18next from "../libs/i18n";
 import { handler, Next } from "./next";
 import {router} from "./routes/index";
 
